@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./Navbar.scss";
 
 const Navbar = () => {
@@ -16,7 +17,9 @@ const Navbar = () => {
           <li>About</li>
           <li>Profile</li>
         </ul>
-        <button className="log-in">Log in</button>
+        <Link to="/login">
+          <button className="log-in">Log in</button>
+        </Link>
       </div>
     </div>
   );

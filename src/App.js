@@ -1,9 +1,16 @@
 import React from "react";
-import Layout from "./components/Layout/Layout";
 import { Routes, Route } from "react-router-dom";
-import Public from "./components/Public/Public";
+import {
+  Login,
+  Navbar,
+  Public,
+  Layout,
+  Welcome,
+  DashLayout,
+  NotesList,
+  UsersList,
+} from "./Components";
 import "./App.scss";
-import Navbar from "./components/Navbar/Navbar";
 
 const App = () => {
   return (
@@ -12,6 +19,17 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Public />} />
+          <Route path="login" element={<Login />} />
+          <Route path="/dash" element={<DashLayout />}>
+            <Route index element={<Welcome />} />
+            <Route path="notes">
+              <Route index element={<NotesList />} />
+            </Route>
+            <Route path="users">
+              <Route index element={<UsersList />} />
+            </Route>
+          </Route>{" "}
+          {/* end dash */}
         </Route>
       </Routes>
     </div>
