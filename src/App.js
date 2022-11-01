@@ -9,17 +9,21 @@ import {
   DashLayout,
   NotesList,
   UsersList,
+  Home,
+  About,
 } from "./Components";
 import "./App.scss";
 
 const App = () => {
   return (
-    <div className="App">
-      <Navbar />
+    <div className="">
       <Routes>
         <Route path="/" element={<Layout />}>
-          <Route index element={<Public />} />
-          <Route path="login" element={<Login />} />
+          <Route path="/" element={<Public />}>
+            <Route index element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="login" element={<Login />} />
+          </Route>
           <Route path="/dash" element={<DashLayout />}>
             <Route index element={<Welcome />} />
             <Route path="notes">

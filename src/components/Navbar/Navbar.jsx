@@ -6,13 +6,17 @@ const Navbar = () => {
   return (
     <div className="navbar">
       <div className="navbar-logo">
-        <h1>
-          Emp<span>Tasks</span>
-        </h1>
+        <Link to="/" style={{ textDecoration: "none" }}>
+          <h1>
+            Emp<span>Tasks</span>
+          </h1>
+        </Link>
       </div>
       <div className="navbar-links">
         <ul>
-          <li className="color">Home</li>
+          <Link to="/">
+            <li className="color">Home</li>
+          </Link>
           <li className="color">Tasks</li>
           <li>About</li>
           <li>Profile</li>
