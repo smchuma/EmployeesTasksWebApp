@@ -16,7 +16,7 @@ import "./App.scss";
 
 const App = () => {
   return (
-    <div className="App">
+    <div className="">
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route path="/" element={<Public />}>
